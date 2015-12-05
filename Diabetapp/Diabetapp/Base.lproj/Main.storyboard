@@ -80,6 +80,11 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-GL-nEd" userLabel="Graph">
+                                <rect key="frame" x="0.0" y="203" width="600" height="281"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -87,13 +92,18 @@
                             <constraint firstItem="9WG-6r-A5D" firstAttribute="top" secondItem="6Dk-wb-Qnd" secondAttribute="bottom" constant="4" id="21Z-Qa-sE2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5uU-h4-sd1" secondAttribute="trailing" constant="-20" id="3Qf-zB-uHF"/>
                             <constraint firstItem="5uU-h4-sd1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4tr-yh-QMe"/>
+                            <constraint firstItem="2dP-GL-nEd" firstAttribute="top" secondItem="hP8-cs-nMe" secondAttribute="bottom" constant="8" id="7QG-2x-59q"/>
                             <constraint firstItem="pIg-ea-fBB" firstAttribute="top" secondItem="oIE-wf-qiz" secondAttribute="bottom" constant="2" id="AcF-cx-itL"/>
                             <constraint firstItem="oIE-wf-qiz" firstAttribute="top" secondItem="9WG-6r-A5D" secondAttribute="bottom" constant="20" id="B3H-aq-Xxh"/>
+                            <constraint firstItem="5uU-h4-sd1" firstAttribute="top" secondItem="2dP-GL-nEd" secondAttribute="bottom" constant="8" id="Dcq-hi-yeU"/>
                             <constraint firstItem="pIg-ea-fBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JHw-ku-B0p"/>
+                            <constraint firstItem="2dP-GL-nEd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KBm-5A-CHA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2dP-GL-nEd" secondAttribute="trailing" constant="-20" id="U9O-MJ-qve"/>
                             <constraint firstItem="hP8-cs-nMe" firstAttribute="top" secondItem="pIg-ea-fBB" secondAttribute="bottom" constant="19" id="UNa-0h-sL7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5uU-h4-sd1" secondAttribute="bottom" id="WDC-QT-fou"/>
                             <constraint firstAttribute="leadingMargin" secondItem="hP8-cs-nMe" secondAttribute="leading" id="Zbi-yH-FEk"/>
                             <constraint firstItem="oIE-wf-qiz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQJ-9E-yf6"/>
+                            <constraint firstItem="2dP-GL-nEd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="gKq-Mx-r2z"/>
                             <constraint firstItem="6Dk-wb-Qnd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kEv-jw-9a5"/>
                             <constraint firstItem="9WG-6r-A5D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m4w-PC-mGm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hP8-cs-nMe" secondAttribute="trailing" id="sNf-Cs-UjV"/>
@@ -113,6 +123,7 @@
                         <outlet property="label_data_SugarLevel" destination="oIE-wf-qiz" id="Ddc-vd-Vnq"/>
                         <outlet property="label_data_currentEst" destination="9WG-6r-A5D" id="25y-Hc-WOM"/>
                         <outlet property="label_unit" destination="pIg-ea-fBB" id="MRU-7C-0BI"/>
+                        <outlet property="view_Graph" destination="2dP-GL-nEd" id="Wb7-Dz-9yd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
