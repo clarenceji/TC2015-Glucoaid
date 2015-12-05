@@ -8,13 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542C1C133DF90032BBF1 /* AppDelegate.swift */; };
-		116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* ViewController.swift */; };
+		116D542F1C133DF90032BBF1 /* DAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* DAViewController.swift */; };
 		116D54321C133DF90032BBF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54301C133DF90032BBF1 /* Main.storyboard */; };
 		116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */; };
 		116D54371C133DF90032BBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116D54361C133DF90032BBF1 /* Assets.xcassets */; };
 		116D543A1C133DF90032BBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */; };
 		116D54451C133DF90032BBF1 /* DiabetappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D54441C133DF90032BBF1 /* DiabetappTests.swift */; };
 		116D54501C133DF90032BBF1 /* DiabetappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */; };
+		2B4B69581C13527C0046F324 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B69561C13527C0046F324 /* Interface.storyboard */; };
+		2B4B695A1C13527C0046F324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B69591C13527C0046F324 /* Assets.xcassets */; };
+		2B4B69611C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B4B69601C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2B4B69681C13527C0046F324 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B69671C13527C0046F324 /* InterfaceController.swift */; };
+		2B4B696A1C13527C0046F324 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B69691C13527C0046F324 /* ExtensionDelegate.swift */; };
+		2B4B696C1C13527C0046F324 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B696B1C13527C0046F324 /* NotificationController.swift */; };
+		2B4B696E1C13527C0046F324 /* GlanceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B696D1C13527C0046F324 /* GlanceController.swift */; };
+		2B4B69701C13527C0046F324 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B4B696F1C13527C0046F324 /* ComplicationController.swift */; };
+		2B4B69721C13527C0046F324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B69711C13527C0046F324 /* Assets.xcassets */; };
+		2B4B69761C13527C0046F324 /* Diabetapp for AppleWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 2B4B69541C13527C0046F324 /* Diabetapp for AppleWatch.app */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,12 +42,51 @@
 			remoteGlobalIDString = 116D54281C133DF90032BBF1;
 			remoteInfo = Diabetapp;
 		};
+		2B4B69621C13527C0046F324 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 116D54211C133DF90032BBF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4B695F1C13527C0046F324;
+			remoteInfo = "Diabetapp for AppleWatch Extension";
+		};
+		2B4B69741C13527C0046F324 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 116D54211C133DF90032BBF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2B4B69531C13527C0046F324;
+			remoteInfo = "Diabetapp for AppleWatch";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2B4B697C1C13527C0046F324 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				2B4B69611C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4B697E1C13527C0046F324 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				2B4B69761C13527C0046F324 /* Diabetapp for AppleWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		116D54291C133DF90032BBF1 /* Diabetapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diabetapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D542C1C133DF90032BBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		116D542E1C133DF90032BBF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		116D542E1C133DF90032BBF1 /* DAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAViewController.swift; sourceTree = "<group>"; };
 		116D54311C133DF90032BBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		116D54341C133DF90032BBF1 /* Diabetapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diabetapp.xcdatamodel; sourceTree = "<group>"; };
 		116D54361C133DF90032BBF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +98,19 @@
 		116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabetappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetappUITests.swift; sourceTree = "<group>"; };
 		116D54511C133DF90032BBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B4B69541C13527C0046F324 /* Diabetapp for AppleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diabetapp for AppleWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4B69571C13527C0046F324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		2B4B69591C13527C0046F324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B4B695B1C13527C0046F324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B4B69601C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Diabetapp for AppleWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B4B69661C13527C0046F324 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		2B4B69671C13527C0046F324 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		2B4B69691C13527C0046F324 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		2B4B696B1C13527C0046F324 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		2B4B696D1C13527C0046F324 /* GlanceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlanceController.swift; sourceTree = "<group>"; };
+		2B4B696F1C13527C0046F324 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		2B4B69711C13527C0046F324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2B4B69731C13527C0046F324 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +135,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B4B695D1C13527C0046F324 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,6 +151,8 @@
 				116D542B1C133DF90032BBF1 /* Diabetapp */,
 				116D54431C133DF90032BBF1 /* DiabetappTests */,
 				116D544E1C133DF90032BBF1 /* DiabetappUITests */,
+				2B4B69551C13527C0046F324 /* Diabetapp for AppleWatch */,
+				2B4B69641C13527C0046F324 /* Diabetapp for AppleWatch Extension */,
 				116D542A1C133DF90032BBF1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,6 +163,8 @@
 				116D54291C133DF90032BBF1 /* Diabetapp.app */,
 				116D54401C133DF90032BBF1 /* DiabetappTests.xctest */,
 				116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */,
+				2B4B69541C13527C0046F324 /* Diabetapp for AppleWatch.app */,
+				2B4B69601C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,11 +172,10 @@
 		116D542B1C133DF90032BBF1 /* Diabetapp */ = {
 			isa = PBXGroup;
 			children = (
-				116D542C1C133DF90032BBF1 /* AppDelegate.swift */,
-				116D542E1C133DF90032BBF1 /* ViewController.swift */,
-				116D54301C133DF90032BBF1 /* Main.storyboard */,
+				116D54601C1345FC0032BBF1 /* Model */,
+				116D54621C13460B0032BBF1 /* Controller */,
+				116D54611C1346070032BBF1 /* View */,
 				116D54361C133DF90032BBF1 /* Assets.xcassets */,
-				116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */,
 				116D543B1C133DF90032BBF1 /* Info.plist */,
 				116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */,
 			);
@@ -128,6 +200,64 @@
 			path = DiabetappUITests;
 			sourceTree = "<group>";
 		};
+		116D54601C1345FC0032BBF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		116D54611C1346070032BBF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				116D54301C133DF90032BBF1 /* Main.storyboard */,
+				116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		116D54621C13460B0032BBF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				116D542C1C133DF90032BBF1 /* AppDelegate.swift */,
+				116D542E1C133DF90032BBF1 /* DAViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		2B4B69551C13527C0046F324 /* Diabetapp for AppleWatch */ = {
+			isa = PBXGroup;
+			children = (
+				2B4B69561C13527C0046F324 /* Interface.storyboard */,
+				2B4B69591C13527C0046F324 /* Assets.xcassets */,
+				2B4B695B1C13527C0046F324 /* Info.plist */,
+			);
+			path = "Diabetapp for AppleWatch";
+			sourceTree = "<group>";
+		};
+		2B4B69641C13527C0046F324 /* Diabetapp for AppleWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B4B69671C13527C0046F324 /* InterfaceController.swift */,
+				2B4B69691C13527C0046F324 /* ExtensionDelegate.swift */,
+				2B4B696B1C13527C0046F324 /* NotificationController.swift */,
+				2B4B696D1C13527C0046F324 /* GlanceController.swift */,
+				2B4B696F1C13527C0046F324 /* ComplicationController.swift */,
+				2B4B69711C13527C0046F324 /* Assets.xcassets */,
+				2B4B69731C13527C0046F324 /* Info.plist */,
+				2B4B69651C13527C0046F324 /* Supporting Files */,
+			);
+			path = "Diabetapp for AppleWatch Extension";
+			sourceTree = "<group>";
+		};
+		2B4B69651C13527C0046F324 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B4B69661C13527C0046F324 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,10 +268,12 @@
 				116D54251C133DF90032BBF1 /* Sources */,
 				116D54261C133DF90032BBF1 /* Frameworks */,
 				116D54271C133DF90032BBF1 /* Resources */,
+				2B4B697E1C13527C0046F324 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2B4B69751C13527C0046F324 /* PBXTargetDependency */,
 			);
 			name = Diabetapp;
 			productName = Diabetapp;
@@ -184,6 +316,40 @@
 			productReference = 116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		2B4B69531C13527C0046F324 /* Diabetapp for AppleWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4B697D1C13527C0046F324 /* Build configuration list for PBXNativeTarget "Diabetapp for AppleWatch" */;
+			buildPhases = (
+				2B4B69521C13527C0046F324 /* Resources */,
+				2B4B697C1C13527C0046F324 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2B4B69631C13527C0046F324 /* PBXTargetDependency */,
+			);
+			name = "Diabetapp for AppleWatch";
+			productName = "Diabetapp for AppleWatch";
+			productReference = 2B4B69541C13527C0046F324 /* Diabetapp for AppleWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		2B4B695F1C13527C0046F324 /* Diabetapp for AppleWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4B697B1C13527C0046F324 /* Build configuration list for PBXNativeTarget "Diabetapp for AppleWatch Extension" */;
+			buildPhases = (
+				2B4B695C1C13527C0046F324 /* Sources */,
+				2B4B695D1C13527C0046F324 /* Frameworks */,
+				2B4B695E1C13527C0046F324 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Diabetapp for AppleWatch Extension";
+			productName = "Diabetapp for AppleWatch Extension";
+			productReference = 2B4B69601C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +371,12 @@
 						CreatedOnToolsVersion = 7.1.1;
 						TestTargetID = 116D54281C133DF90032BBF1;
 					};
+					2B4B69531C13527C0046F324 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					2B4B695F1C13527C0046F324 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
 				};
 			};
 			buildConfigurationList = 116D54241C133DF90032BBF1 /* Build configuration list for PBXProject "Diabetapp" */;
@@ -223,6 +395,8 @@
 				116D54281C133DF90032BBF1 /* Diabetapp */,
 				116D543F1C133DF90032BBF1 /* DiabetappTests */,
 				116D544A1C133DF90032BBF1 /* DiabetappUITests */,
+				2B4B69531C13527C0046F324 /* Diabetapp for AppleWatch */,
+				2B4B695F1C13527C0046F324 /* Diabetapp for AppleWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -252,6 +426,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B4B69521C13527C0046F324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4B695A1C13527C0046F324 /* Assets.xcassets in Resources */,
+				2B4B69581C13527C0046F324 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2B4B695E1C13527C0046F324 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4B69721C13527C0046F324 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -259,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */,
+				116D542F1C133DF90032BBF1 /* DAViewController.swift in Sources */,
 				116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */,
 				116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */,
 			);
@@ -281,6 +472,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2B4B695C1C13527C0046F324 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B4B696C1C13527C0046F324 /* NotificationController.swift in Sources */,
+				2B4B696A1C13527C0046F324 /* ExtensionDelegate.swift in Sources */,
+				2B4B69701C13527C0046F324 /* ComplicationController.swift in Sources */,
+				2B4B69681C13527C0046F324 /* InterfaceController.swift in Sources */,
+				2B4B696E1C13527C0046F324 /* GlanceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -293,6 +496,16 @@
 			isa = PBXTargetDependency;
 			target = 116D54281C133DF90032BBF1 /* Diabetapp */;
 			targetProxy = 116D544C1C133DF90032BBF1 /* PBXContainerItemProxy */;
+		};
+		2B4B69631C13527C0046F324 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B4B695F1C13527C0046F324 /* Diabetapp for AppleWatch Extension */;
+			targetProxy = 2B4B69621C13527C0046F324 /* PBXContainerItemProxy */;
+		};
+		2B4B69751C13527C0046F324 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2B4B69531C13527C0046F324 /* Diabetapp for AppleWatch */;
+			targetProxy = 2B4B69741C13527C0046F324 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -311,6 +524,14 @@
 				116D54391C133DF90032BBF1 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		2B4B69561C13527C0046F324 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2B4B69571C13527C0046F324 /* Base */,
+			);
+			name = Interface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -467,6 +688,68 @@
 			};
 			name = Release;
 		};
+		2B4B69771C13527C0046F324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Diabetapp_for_AppleWatch_Extension;
+				INFOPLIST_FILE = "Diabetapp for AppleWatch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		2B4B69781C13527C0046F324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				IBSC_MODULE = Diabetapp_for_AppleWatch_Extension;
+				INFOPLIST_FILE = "Diabetapp for AppleWatch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
+		2B4B69791C13527C0046F324 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Diabetapp for AppleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Debug;
+		};
+		2B4B697A1C13527C0046F324 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				INFOPLIST_FILE = "Diabetapp for AppleWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +769,7 @@
 				116D54561C133DF90032BBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		116D54571C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappTests" */ = {
 			isa = XCConfigurationList;
@@ -494,12 +778,30 @@
 				116D54591C133DF90032BBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		116D545A1C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				116D545B1C133DF90032BBF1 /* Debug */,
 				116D545C1C133DF90032BBF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2B4B697B1C13527C0046F324 /* Build configuration list for PBXNativeTarget "Diabetapp for AppleWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4B69791C13527C0046F324 /* Debug */,
+				2B4B697A1C13527C0046F324 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2B4B697D1C13527C0046F324 /* Build configuration list for PBXNativeTarget "Diabetapp for AppleWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B4B69771C13527C0046F324 /* Debug */,
+				2B4B69781C13527C0046F324 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
