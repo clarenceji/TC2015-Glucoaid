@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542C1C133DF90032BBF1 /* AppDelegate.swift */; };
-		116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* ViewController.swift */; };
+		116D542F1C133DF90032BBF1 /* DAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* DAViewController.swift */; };
 		116D54321C133DF90032BBF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54301C133DF90032BBF1 /* Main.storyboard */; };
 		116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */; };
 		116D54371C133DF90032BBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116D54361C133DF90032BBF1 /* Assets.xcassets */; };
@@ -86,7 +86,7 @@
 /* Begin PBXFileReference section */
 		116D54291C133DF90032BBF1 /* Diabetapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diabetapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D542C1C133DF90032BBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		116D542E1C133DF90032BBF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		116D542E1C133DF90032BBF1 /* DAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAViewController.swift; sourceTree = "<group>"; };
 		116D54311C133DF90032BBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		116D54341C133DF90032BBF1 /* Diabetapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diabetapp.xcdatamodel; sourceTree = "<group>"; };
 		116D54361C133DF90032BBF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				116D542C1C133DF90032BBF1 /* AppDelegate.swift */,
-				116D542E1C133DF90032BBF1 /* ViewController.swift */,
+				116D542E1C133DF90032BBF1 /* DAViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -450,7 +450,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */,
+				116D542F1C133DF90032BBF1 /* DAViewController.swift in Sources */,
 				116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */,
 				116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */,
 			);
