@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Charts
 
 enum IsItSafeOrNot {
     case Safe
@@ -21,6 +22,8 @@ class DAViewController: UIViewController {
     @IBOutlet var label_unit: UILabel!
     @IBOutlet var button_AddNewInput: UIButton!
     
+    @IBOutlet var view_Graph: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,6 +37,8 @@ class DAViewController: UIViewController {
         // TODO: Change color scheme based on situation
         makeItSafe()
 //        makeItScary()
+        
+        makeGraph()
         
     }
     
@@ -83,17 +88,13 @@ class DAViewController: UIViewController {
         gradientLayer.frame = view.bounds
         
         view.layer.insertSublayer(gradientLayer, atIndex: 0)
-//        view.layer.addSublayer(gradientLayer)
-    }
-
-}
-
-extension UIColor {
-    class func diabetRed() -> UIColor {
-        return UIColor(red: 244/255, green: 76/255, blue: 91/255, alpha: 1)
     }
     
-    class func diabetBlue() -> UIColor {
-        return UIColor(red: 102/255, green: 161/255, blue: 231/255, alpha: 1)
+    func makeGraph() {
+        let lineChartView = LineChartView(frame: view_Graph.bounds)
+        lineChartView.data = LineChartData(xVals: [0, 1, 2, 3, 4, 5])
+        
+        view_Graph.addSubview(lineChartView)
     }
+
 }
