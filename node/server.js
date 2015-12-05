@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var Parse = require('parse/node').Parse;
 var time = require('time');
 var CronJob = require('cron').CronJob;
+var request = require("request");
 
 Parse.initialize("Z6odwa0AvOCTGRd72nNeDmULJiqiEawl4bxWUfwV", "tbDlnN9RK8lbMaxjmQ3ZHLwrgZjHk6eouZEzqOY7");
 
@@ -45,6 +46,27 @@ router.route('/graph')
 router.route('/estimate')
     .get(function(req, res) {
         res.send(200);
+    });
+
+router.route('log')
+    .post(function (req, res) {
+
+        var url = "https://www.ManageBGL.com/api/1.0/add.json?token=5006--5046b4aceaa70c2b5068427e8e79d07a"
+
+        url.append("&logtype=" + req.body.type);
+        url.append("&value=" + req.body.value);
+        url.append("&time=" + req.body.time);
+        //&log_type=1&value=4.6&time=2015-12-05 16:00:03"
+
+        request(url, function(error, response, body) {
+            console.log(body);
+            if (error) {
+                console.log(error);
+                res.send(400);
+            } else {
+                res.send(200);
+            }
+        });
     });
 
 
