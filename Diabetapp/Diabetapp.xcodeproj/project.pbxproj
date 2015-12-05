@@ -99,11 +99,10 @@
 		116D542B1C133DF90032BBF1 /* Diabetapp */ = {
 			isa = PBXGroup;
 			children = (
-				116D542C1C133DF90032BBF1 /* AppDelegate.swift */,
-				116D542E1C133DF90032BBF1 /* ViewController.swift */,
-				116D54301C133DF90032BBF1 /* Main.storyboard */,
+				116D54601C1345FC0032BBF1 /* Model */,
+				116D54621C13460B0032BBF1 /* Controller */,
+				116D54611C1346070032BBF1 /* View */,
 				116D54361C133DF90032BBF1 /* Assets.xcassets */,
-				116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */,
 				116D543B1C133DF90032BBF1 /* Info.plist */,
 				116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */,
 			);
@@ -126,6 +125,31 @@
 				116D54511C133DF90032BBF1 /* Info.plist */,
 			);
 			path = DiabetappUITests;
+			sourceTree = "<group>";
+		};
+		116D54601C1345FC0032BBF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		116D54611C1346070032BBF1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				116D54301C133DF90032BBF1 /* Main.storyboard */,
+				116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		116D54621C13460B0032BBF1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				116D542C1C133DF90032BBF1 /* AppDelegate.swift */,
+				116D542E1C133DF90032BBF1 /* ViewController.swift */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,6 +510,7 @@
 				116D54561C133DF90032BBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		116D54571C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +519,7 @@
 				116D54591C133DF90032BBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		116D545A1C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +528,7 @@
 				116D545C1C133DF90032BBF1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
