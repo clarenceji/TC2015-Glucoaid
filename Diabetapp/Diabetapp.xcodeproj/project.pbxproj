@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542C1C133DF90032BBF1 /* AppDelegate.swift */; };
+		116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* ViewController.swift */; };
+		116D54321C133DF90032BBF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54301C133DF90032BBF1 /* Main.storyboard */; };
+		116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */; };
+		116D54371C133DF90032BBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116D54361C133DF90032BBF1 /* Assets.xcassets */; };
+		116D543A1C133DF90032BBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */; };
+		116D54451C133DF90032BBF1 /* DiabetappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D54441C133DF90032BBF1 /* DiabetappTests.swift */; };
+		116D54501C133DF90032BBF1 /* DiabetappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		116D54411C133DF90032BBF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 116D54211C133DF90032BBF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 116D54281C133DF90032BBF1;
+			remoteInfo = Diabetapp;
+		};
+		116D544C1C133DF90032BBF1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 116D54211C133DF90032BBF1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 116D54281C133DF90032BBF1;
+			remoteInfo = Diabetapp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		116D54291C133DF90032BBF1 /* Diabetapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diabetapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		116D542C1C133DF90032BBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		116D542E1C133DF90032BBF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		116D54311C133DF90032BBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		116D54341C133DF90032BBF1 /* Diabetapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diabetapp.xcdatamodel; sourceTree = "<group>"; };
+		116D54361C133DF90032BBF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		116D54391C133DF90032BBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		116D543B1C133DF90032BBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116D54401C133DF90032BBF1 /* DiabetappTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabetappTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		116D54441C133DF90032BBF1 /* DiabetappTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetappTests.swift; sourceTree = "<group>"; };
+		116D54461C133DF90032BBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabetappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetappUITests.swift; sourceTree = "<group>"; };
+		116D54511C133DF90032BBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		116D54261C133DF90032BBF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		116D543D1C133DF90032BBF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		116D54481C133DF90032BBF1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		116D54201C133DF90032BBF1 = {
+			isa = PBXGroup;
+			children = (
+				116D542B1C133DF90032BBF1 /* Diabetapp */,
+				116D54431C133DF90032BBF1 /* DiabetappTests */,
+				116D544E1C133DF90032BBF1 /* DiabetappUITests */,
+				116D542A1C133DF90032BBF1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		116D542A1C133DF90032BBF1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				116D54291C133DF90032BBF1 /* Diabetapp.app */,
+				116D54401C133DF90032BBF1 /* DiabetappTests.xctest */,
+				116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		116D542B1C133DF90032BBF1 /* Diabetapp */ = {
+			isa = PBXGroup;
+			children = (
+				116D542C1C133DF90032BBF1 /* AppDelegate.swift */,
+				116D542E1C133DF90032BBF1 /* ViewController.swift */,
+				116D54301C133DF90032BBF1 /* Main.storyboard */,
+				116D54361C133DF90032BBF1 /* Assets.xcassets */,
+				116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */,
+				116D543B1C133DF90032BBF1 /* Info.plist */,
+				116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */,
+			);
+			path = Diabetapp;
+			sourceTree = "<group>";
+		};
+		116D54431C133DF90032BBF1 /* DiabetappTests */ = {
+			isa = PBXGroup;
+			children = (
+				116D54441C133DF90032BBF1 /* DiabetappTests.swift */,
+				116D54461C133DF90032BBF1 /* Info.plist */,
+			);
+			path = DiabetappTests;
+			sourceTree = "<group>";
+		};
+		116D544E1C133DF90032BBF1 /* DiabetappUITests */ = {
+			isa = PBXGroup;
+			children = (
+				116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */,
+				116D54511C133DF90032BBF1 /* Info.plist */,
+			);
+			path = DiabetappUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		116D54281C133DF90032BBF1 /* Diabetapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 116D54541C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "Diabetapp" */;
+			buildPhases = (
+				116D54251C133DF90032BBF1 /* Sources */,
+				116D54261C133DF90032BBF1 /* Frameworks */,
+				116D54271C133DF90032BBF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Diabetapp;
+			productName = Diabetapp;
+			productReference = 116D54291C133DF90032BBF1 /* Diabetapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		116D543F1C133DF90032BBF1 /* DiabetappTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 116D54571C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappTests" */;
+			buildPhases = (
+				116D543C1C133DF90032BBF1 /* Sources */,
+				116D543D1C133DF90032BBF1 /* Frameworks */,
+				116D543E1C133DF90032BBF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				116D54421C133DF90032BBF1 /* PBXTargetDependency */,
+			);
+			name = DiabetappTests;
+			productName = DiabetappTests;
+			productReference = 116D54401C133DF90032BBF1 /* DiabetappTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		116D544A1C133DF90032BBF1 /* DiabetappUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 116D545A1C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappUITests" */;
+			buildPhases = (
+				116D54471C133DF90032BBF1 /* Sources */,
+				116D54481C133DF90032BBF1 /* Frameworks */,
+				116D54491C133DF90032BBF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				116D544D1C133DF90032BBF1 /* PBXTargetDependency */,
+			);
+			name = DiabetappUITests;
+			productName = DiabetappUITests;
+			productReference = 116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		116D54211C133DF90032BBF1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Diabetapp;
+				TargetAttributes = {
+					116D54281C133DF90032BBF1 = {
+						CreatedOnToolsVersion = 7.1.1;
+					};
+					116D543F1C133DF90032BBF1 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 116D54281C133DF90032BBF1;
+					};
+					116D544A1C133DF90032BBF1 = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 116D54281C133DF90032BBF1;
+					};
+				};
+			};
+			buildConfigurationList = 116D54241C133DF90032BBF1 /* Build configuration list for PBXProject "Diabetapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 116D54201C133DF90032BBF1;
+			productRefGroup = 116D542A1C133DF90032BBF1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				116D54281C133DF90032BBF1 /* Diabetapp */,
+				116D543F1C133DF90032BBF1 /* DiabetappTests */,
+				116D544A1C133DF90032BBF1 /* DiabetappUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		116D54271C133DF90032BBF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				116D543A1C133DF90032BBF1 /* LaunchScreen.storyboard in Resources */,
+				116D54371C133DF90032BBF1 /* Assets.xcassets in Resources */,
+				116D54321C133DF90032BBF1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		116D543E1C133DF90032BBF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		116D54491C133DF90032BBF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		116D54251C133DF90032BBF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */,
+				116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */,
+				116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		116D543C1C133DF90032BBF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				116D54451C133DF90032BBF1 /* DiabetappTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		116D54471C133DF90032BBF1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				116D54501C133DF90032BBF1 /* DiabetappUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		116D54421C133DF90032BBF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 116D54281C133DF90032BBF1 /* Diabetapp */;
+			targetProxy = 116D54411C133DF90032BBF1 /* PBXContainerItemProxy */;
+		};
+		116D544D1C133DF90032BBF1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 116D54281C133DF90032BBF1 /* Diabetapp */;
+			targetProxy = 116D544C1C133DF90032BBF1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		116D54301C133DF90032BBF1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				116D54311C133DF90032BBF1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				116D54391C133DF90032BBF1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		116D54521C133DF90032BBF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		116D54531C133DF90032BBF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		116D54551C133DF90032BBF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Diabetapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		116D54561C133DF90032BBF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Diabetapp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		116D54581C133DF90032BBF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DiabetappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.DiabetappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diabetapp.app/Diabetapp";
+			};
+			name = Debug;
+		};
+		116D54591C133DF90032BBF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DiabetappTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.DiabetappTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Diabetapp.app/Diabetapp";
+			};
+			name = Release;
+		};
+		116D545B1C133DF90032BBF1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DiabetappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.DiabetappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Diabetapp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		116D545C1C133DF90032BBF1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DiabetappUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.DiabetappUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Diabetapp;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		116D54241C133DF90032BBF1 /* Build configuration list for PBXProject "Diabetapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				116D54521C133DF90032BBF1 /* Debug */,
+				116D54531C133DF90032BBF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		116D54541C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "Diabetapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				116D54551C133DF90032BBF1 /* Debug */,
+				116D54561C133DF90032BBF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		116D54571C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				116D54581C133DF90032BBF1 /* Debug */,
+				116D54591C133DF90032BBF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		116D545A1C133DF90032BBF1 /* Build configuration list for PBXNativeTarget "DiabetappUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				116D545B1C133DF90032BBF1 /* Debug */,
+				116D545C1C133DF90032BBF1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				116D54341C133DF90032BBF1 /* Diabetapp.xcdatamodel */,
+			);
+			currentVersion = 116D54341C133DF90032BBF1 /* Diabetapp.xcdatamodel */;
+			path = Diabetapp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 116D54211C133DF90032BBF1 /* Project object */;
+}
