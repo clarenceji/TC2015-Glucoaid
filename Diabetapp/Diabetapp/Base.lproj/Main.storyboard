@@ -27,7 +27,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(90% confidence)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-6r-A5D">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(90% confidence)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9WG-6r-A5D">
                                 <rect key="frame" x="240" y="46" width="121" height="21"/>
                                 <animations/>
                                 <constraints>
@@ -169,21 +169,35 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add Meal (g Carbs)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w9A-Ai-RgI">
+                                <rect key="frame" x="93" y="249" width="414" height="69"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="4f9-P0-5pP"/>
+                                    <constraint firstAttribute="height" constant="69" id="vTm-cN-r4c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="w9A-Ai-RgI" firstAttribute="top" secondItem="5o6-jr-MFs" secondAttribute="bottom" constant="8" id="0XV-3X-FHk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w9A-Ai-RgI" secondAttribute="trailing" constant="73" id="2ME-3d-YQA"/>
                             <constraint firstItem="oWE-Wd-JyB" firstAttribute="leading" secondItem="YKv-pw-1yF" secondAttribute="leadingMargin" constant="-20" id="e8c-gO-2z2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="oWE-Wd-JyB" secondAttribute="trailing" constant="-20" id="fw9-OA-Vwp"/>
                             <constraint firstItem="5o6-jr-MFs" firstAttribute="top" secondItem="z6d-5S-2Ni" secondAttribute="bottom" constant="108" id="huR-LG-Gh7"/>
                             <constraint firstItem="5o6-jr-MFs" firstAttribute="centerX" secondItem="YKv-pw-1yF" secondAttribute="centerX" id="jVw-qh-5H8"/>
                             <constraint firstItem="fE3-NQ-k6J" firstAttribute="top" secondItem="oWE-Wd-JyB" secondAttribute="bottom" id="leD-Wa-haN"/>
+                            <constraint firstItem="w9A-Ai-RgI" firstAttribute="leading" secondItem="YKv-pw-1yF" secondAttribute="leadingMargin" constant="73" id="sgm-y4-Vla"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add New Input" id="glE-a3-neI"/>
                     <connections>
                         <outlet property="addButton" destination="oWE-Wd-JyB" id="t65-qN-b2J"/>
                         <outlet property="inputField" destination="5o6-jr-MFs" id="1hK-rJ-rlR"/>
+                        <outlet property="inputField_Meal" destination="w9A-Ai-RgI" id="8Ih-EQ-0nN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kpR-bQ-cbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

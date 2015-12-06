@@ -11,6 +11,7 @@ import UIKit
 class DAAddInputViewController: UIViewController, UIGestureRecognizerDelegate {
 
     @IBOutlet var inputField: UITextField!
+    @IBOutlet var inputField_Meal: UITextField!
     @IBOutlet var addButton: UIButton!
     
     override func viewDidLoad() {
@@ -24,6 +25,7 @@ class DAAddInputViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func resignFirstResponderX() {
         self.inputField.resignFirstResponder()
+        self.inputField_Meal.resignFirstResponder()
     }
 
     override func didReceiveMemoryWarning() {
