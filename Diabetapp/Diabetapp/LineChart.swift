@@ -98,6 +98,12 @@ public class LineChart: UIView {
     public var x: Coordinate = Coordinate()
     public var y: Coordinate = Coordinate()
 
+    public var liveLimit: Int = 0 {
+        didSet {
+            print("Set value to \(dataStore.count)")
+            print("Set value to \(liveLimit)")
+        }
+    }
     
     // values calculated on init
     private var drawingHeight: CGFloat = 0 {
@@ -414,12 +420,6 @@ public class LineChart: UIView {
         
         for index in 1..<data.count {
             
-//            let dataTimeString = y.labels.values[index]
-//            let dataHour = Int(dataTimeString.substringToIndex(dataTimeString.startIndex.advancedBy(2)))
-//            if dataHour >= hour {
-//                // TODO: 
-//            }
-            
             xValue = self.x.scale(CGFloat(index)) + x.axis.inset
             yValue = self.bounds.height - self.y.scale(data[index]) - y.axis.inset
             
@@ -432,7 +432,8 @@ public class LineChart: UIView {
         let layer = CAShapeLayer()
         layer.frame = self.bounds
         layer.path = path.CGPath
-        layer.strokeColor = colors[lineIndex].CGColor
+        print("lineIndex: \(lineIndex)")
+        layer.strokeColor = lineIndex <= liveLimit ? colors[lineIndex].CGColor : UIColor.grayColor().CGColor
         layer.fillColor = nil
         layer.lineWidth = lineWidth
         self.layer.addSublayer(layer)

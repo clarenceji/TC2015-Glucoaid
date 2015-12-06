@@ -31,7 +31,7 @@ class InterfaceController: WKInterfaceController {
             if data != nil {
                 self.timeline.convertDataToDAEntries(data)
                 
-                self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "loadCurrentSugarLevel", userInfo: nil, repeats: true)
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: "loadCurrentSugarLevel", userInfo: nil, repeats: true)
                 self.timer.fire()
                 self.loadCurrentSugarLevel()
             }
@@ -40,7 +40,7 @@ class InterfaceController: WKInterfaceController {
     
     func loadCurrentSugarLevel() {
         let entry = timeline.getEntryForDate(NSDate())
-        if entry.level <= 100 {
+        if entry.level < 180 && entry.level > 70 {
             level.setTextColor(UIColor.blueColor())
         } else {
             level.setTextColor(UIColor.redColor())

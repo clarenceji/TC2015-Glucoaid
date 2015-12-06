@@ -20,7 +20,7 @@ extension UIColor {
 extension LineChart {
     func quadCurvedPathWithPoints(points: [CGPoint]) -> UIBezierPath {
         let path = UIBezierPath()
-        
+        print("YYYYYYYAYS - \(points.count)")
         var p1 = points[0]
         path.moveToPoint(p1)
         
@@ -38,6 +38,8 @@ extension LineChart {
             
             p1 = p2
         }
+        
+        path.stroke()
         
         return path
     }

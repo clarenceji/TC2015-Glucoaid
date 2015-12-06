@@ -112,6 +112,11 @@ class DAViewController: UIViewController {
             print(xLabelValues)
 //            self.lineChart.x.labels.shouldCreateLabel = shouldCreateLabel
             
+            self.lineChart.liveLimit = self.timeline.timeline.indexOf({ (entry) -> Bool in
+                let e = self.timeline.getEntryForDate(NSDate())
+                return e.entryDate.timeIntervalSinceDate(entry.entryDate) == 0
+            })!
+            
             self.scrollView_Graph.contentSize = self.lineChart.bounds.size
             self.scrollView_Graph.autoresizingMask = .FlexibleWidth
             self.scrollView_Graph.addSubview(self.lineChart)
@@ -131,17 +136,21 @@ class DAViewController: UIViewController {
                     self.timeline.convertDataToDAEntries(data)
                     self.loadDataAndMakeGraph(self.timeline.timeline)
                     
-                    self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "loadCurrentSugarLevel", userInfo: nil, repeats: true)
-                    self.timer.fire()
-                    self.loadCurrentSugarLevel()
+                    dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                        self.timer = NSTimer.scheduledTimerWithTimeInterval(10, target: self, selector: "loadCurrentSugarLevel", userInfo: nil, repeats: true)
+                        self.timer.fire()
+                        self.loadCurrentSugarLevel()
+                    })
                 }
             }
         }
     }
     
     func loadCurrentSugarLevel() {
+        print("update")
+        
         label_data_SugarLevel.text = "\(self.timeline.getEntryForDate(NSDate()).level)"
-        if self.timeline.getEntryForDate(NSDate()).level > 100 {
+        if self.timeline.getEntryForDate(NSDate()).level > 180 || self.timeline.getEntryForDate(NSDate()).level < 70 {
             self.makeItScary()
         }
     }
@@ -155,7 +164,7 @@ class DAViewController: UIViewController {
             let dateFormatter = NSDateFormatter()
             dateFormatter.dateFormat = "HH:MM"
             
-            if index == 0 || index % 50 == 0 || index == entries.count - 1 {
+            if index == 0 || index % 100 == 0 || index == entries.count - 1 {
                 
                 line.append(CGFloat(entry.level))
                 
