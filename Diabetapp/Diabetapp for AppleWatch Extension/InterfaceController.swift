@@ -21,6 +21,8 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        print(DATimeline().dummyTimeline())
     }
 
     override func didDeactivate() {

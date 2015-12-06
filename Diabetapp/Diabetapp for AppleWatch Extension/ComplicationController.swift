@@ -8,21 +8,49 @@
 
 import ClockKit
 
-
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
+    let timeline = DATimeline().dummyTimeline()
+    
     // MARK: - Timeline Configuration
+    func getEntryFor(complication: CLKComplication, entry: DAEntry) -> CLKComplicationTimelineEntry? {
+        switch complication.family {
+        case .ModularSmall:
+            let modularSmallTemplate = CLKComplicationTemplateModularSmallRingText()
+            modularSmallTemplate.textProvider = CLKSimpleTextProvider(text: "\(entry.level)")
+            modularSmallTemplate.fillFraction = Float(entry.estimate) / 100.0
+            modularSmallTemplate.ringStyle = .Closed
+            let entry = CLKComplicationTimelineEntry(date:NSDate(), complicationTemplate: modularSmallTemplate)
+            return entry
+        case .ModularLarge:
+            let modularLargeTemplate = CLKComplicationTemplateModularLargeStandardBody()
+            modularLargeTemplate.headerTextProvider = CLKTimeIntervalTextProvider(startDate: entry.entryDate,
+                endDate: NSDate(timeIntervalSinceNow: 60))
+            modularLargeTemplate.body1TextProvider =
+                CLKSimpleTextProvider(text: "\(entry.level) mg/dL", shortText: "\(entry.level) mg/dL")
+            modularLargeTemplate.body2TextProvider =
+                CLKSimpleTextProvider(text: "\(entry.estimate)% confidence", shortText: nil)
+            let entry = CLKComplicationTimelineEntry(date:NSDate(), complicationTemplate: modularLargeTemplate)
+            return entry
+        case .UtilitarianLarge:
+            let template = CLKComplicationTemplateUtilitarianLargeFlat()
+            template.textProvider = CLKSimpleTextProvider(text: "\(entry.level) mg/dL (\(entry.estimate)%)")
+            let entry = CLKComplicationTimelineEntry(date: NSDate(), complicationTemplate: template)
+            return entry
+        default: return nil
+        }
+    }
     
     func getSupportedTimeTravelDirectionsForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationTimeTravelDirections) -> Void) {
         handler([.Forward, .Backward])
     }
     
     func getTimelineStartDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+        handler(NSDate(timeIntervalSinceNow: -3 * DATimeline.HOUR))
     }
     
     func getTimelineEndDateForComplication(complication: CLKComplication, withHandler handler: (NSDate?) -> Void) {
-        handler(nil)
+         handler(NSDate(timeIntervalSinceNow: 3 * DATimeline.HOUR))
     }
     
     func getPrivacyBehaviorForComplication(complication: CLKComplication, withHandler handler: (CLKComplicationPrivacyBehavior) -> Void) {
@@ -32,18 +60,33 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     // MARK: - Timeline Population
     
     func getCurrentTimelineEntryForComplication(complication: CLKComplication, withHandler handler: ((CLKComplicationTimelineEntry?) -> Void)) {
-        // Call the handler with the current timeline entry
-        handler(nil)
+        for entry in timeline {
+            if (entry.entryDate.timeIntervalSinceNow >= 0) {
+                handler(getEntryFor(complication, entry: entry))
+                return
+            }
+        }
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, beforeDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        // Call the handler with the timeline entries prior to the given date
-        handler(nil)
+        var timelineEntries: [CLKComplicationTimelineEntry] = []
+        for entry in timeline {
+            if timelineEntries.count < limit && entry.entryDate.timeIntervalSinceNow < 0 {
+                timelineEntries.append(getEntryFor(complication, entry: entry)!)
+            }
+        }
+        handler(timelineEntries)
     }
     
     func getTimelineEntriesForComplication(complication: CLKComplication, afterDate date: NSDate, limit: Int, withHandler handler: (([CLKComplicationTimelineEntry]?) -> Void)) {
-        // Call the handler with the timeline entries after to the given date
-        handler(nil)
+        
+        var timelineEntries: [CLKComplicationTimelineEntry] = []
+        for entry in timeline {
+            if timelineEntries.count < limit && entry.entryDate.timeIntervalSinceNow > 0 {
+                timelineEntries.append(getEntryFor(complication, entry: entry)!)
+            }
+        }
+        handler(timelineEntries)
     }
     
     // MARK: - Update Scheduling
