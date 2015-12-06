@@ -392,23 +392,37 @@ public class LineChart: UIView {
     private func drawLine(lineIndex: Int) {
         
         var data = self.dataStore[lineIndex]
-//        let path = UIBezierPath()
+        let minimumFromData = data.minElement()!
+        let maximumFromData = data.maxElement()!
+        print(minimumFromData)
         
         var xValue = self.x.scale(0) + x.axis.inset
         var yValue = self.bounds.height - self.y.scale(data[0]) - y.axis.inset
+        print(yValue)
+        
+        
         
         var cgpointArray = [CGPoint(x: xValue, y: yValue)]
         
-//        path.moveToPoint(CGPoint(x: xValue, y: yValue))
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components(.Calendar, fromDate: date)
+        let hour = components.hour
+        let minutes = components.minute
+        
+        
         for index in 1..<data.count {
+            
+            let dataTimeString = y.labels.values[index]
+            let dataHour = Int(dataTimeString.substringToIndex(dataTimeString.startIndex.advancedBy(2)))
+            if dataHour >= hour {
+                // TODO: 
+            }
+            
             xValue = self.x.scale(CGFloat(index)) + x.axis.inset
             yValue = self.bounds.height - self.y.scale(data[index]) - y.axis.inset
             
             cgpointArray.append(CGPoint(x: xValue, y: yValue))
-            
-            // TODO:
-//            path.addCurveToPoint(CGPoint(x: xValue, y: yValue), controlPoint1: CGPoint(x: xValue, y: yValue), controlPoint2: CGPoint(x: xValue, y: yValue))
-//            path.addLineToPoint(CGPoint(x: xValue, y: yValue))
         }
         
         let path = quadCurvedPathWithPoints(cgpointArray)

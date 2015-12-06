@@ -39,16 +39,11 @@ class DAViewController: UIViewController {
         makeItSafe()
 //        makeItScary()
         
-        makeGraph()
+        lineChart = LineChart()
         
-        DAServer.sharedSession().fetchData("http://tc2015.herokuapp.com/graph") { (data, error) -> Void in
-            print(data, error)
-        }
+        loadData()
         
-    }
-    
-    override func viewDidAppear(animated: Bool) {
-        print(lineChart.y.labels.values)
+        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -99,20 +94,87 @@ class DAViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, atIndex: 0)
     }
     
-    func makeGraph() {
-        lineChart = LineChart(frame: scrollView_Graph.bounds)
-        lineChart.addLine([3,5,7,1,9,2,12])
+    func makeGraph(line: [CGFloat], xLabelValues: [String]) {
         
-        lineChart.x.grid.color = UIColor.clearColor()
-        lineChart.y.grid.color = lineChart.y.grid.color.colorWithAlphaComponent(0.3)
-        lineChart.x.axis.color = UIColor(red: 0.121569, green: 0.466667, blue: 0.705882, alpha: 1)
+        dispatch_async(dispatch_get_main_queue(), {
+            
+            self.lineChart = LineChart(frame: self.scrollView_Graph.bounds)
+            self.lineChart.addLine(line)
+            
+            self.lineChart.dots.visible = false
+            
+            self.lineChart.x.grid.color = UIColor.clearColor()
+            self.lineChart.y.grid.color = self.lineChart.y.grid.color.colorWithAlphaComponent(0.3)
+            self.lineChart.x.axis.color = UIColor(red: 0.121569, green: 0.466667, blue: 0.705882, alpha: 1)
+            
+            self.lineChart.y.labels.visible = false
+            self.lineChart.x.labels.values = xLabelValues
+            
+            self.scrollView_Graph.contentSize = self.lineChart.bounds.size
+            self.scrollView_Graph.autoresizingMask = .FlexibleWidth
+            self.scrollView_Graph.addSubview(self.lineChart)
+            
+        })
         
-        lineChart.y.labels.visible = false
-        lineChart.x.labels.values = ["7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00"]
+    }
+    
+    func loadData() {
         
-        scrollView_Graph.contentSize = lineChart.bounds.size
-        scrollView_Graph.autoresizingMask = .FlexibleWidth
-        scrollView_Graph.addSubview(lineChart)
+        var entries = [DAEntry]()
+        
+        if let data = NSUserDefaults.standardUserDefaults().objectForKey("downloadedData") {
+            entries = self.convertDataToDAEntries(data as? [[String]])
+            loadDataAndMakeGraph(entries)
+        } else {
+            DAServer.sharedSession().fetchData("http://tc2015.herokuapp.com/graph") { (data, error) -> Void in
+                if data != nil {
+                    entries = self.convertDataToDAEntries(data)
+                    self.loadDataAndMakeGraph(entries)
+                }
+            }
+        }
+        
+
+    }
+    
+    func loadDataAndMakeGraph(entries: [DAEntry]) {
+        var line = [CGFloat]()
+        var xLabelValues = [String]()
+        for (index, entry) in entries.enumerate() {
+//            if index > 30 && index < 60 {
+                line.append(CGFloat(entry.level))
+                
+                let dateFormatter = NSDateFormatter()
+                dateFormatter.dateFormat = "HH:MM"
+                xLabelValues.append(dateFormatter.stringFromDate(entry.entryDate))
+//            } else if index >= 60 {
+//                break
+//            }
+        }
+        makeGraph(line, xLabelValues: xLabelValues)
+    }
+    
+    func storeFetchResults(data: [[String]]?) {
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        userDefaults.setObject(data, forKey: "downloadedData")
+    }
+    
+    func convertDataToDAEntries(data: [[String]]?) -> [DAEntry] {
+        
+        var entries = [DAEntry]()
+        for entry: [String] in data! {
+            var entryTime = entry[0]
+            entryTime = entryTime.substringWithRange(Range<String.Index>(start: entryTime.startIndex, end: entryTime.endIndex.advancedBy(-3)))
+            
+            let entryDate = NSDate(timeIntervalSince1970: Double(entryTime)!)
+            
+            let daEntry = DAEntry(level: Int(entry[1])!, estimate: 60, entryDate: entryDate)
+            
+            entries.append(daEntry)
+        }
+        
+        print(entries)
+        return entries
     }
 
 }
