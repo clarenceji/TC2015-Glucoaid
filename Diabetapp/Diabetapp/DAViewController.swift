@@ -94,7 +94,7 @@ class DAViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, atIndex: 0)
     }
     
-    func makeGraph(line: [CGFloat], xLabelValues: [String], shouldCreateLabel: [Bool]) {
+    func makeGraph(line: [CGFloat], xLabelValues: [String]) {
         
         dispatch_async(dispatch_get_main_queue(), {
             
@@ -109,7 +109,8 @@ class DAViewController: UIViewController {
             
             self.lineChart.y.labels.visible = false
             self.lineChart.x.labels.values = xLabelValues
-            self.lineChart.x.labels.shouldCreateLabel = shouldCreateLabel
+            print(xLabelValues)
+//            self.lineChart.x.labels.shouldCreateLabel = shouldCreateLabel
             
             self.scrollView_Graph.contentSize = self.lineChart.bounds.size
             self.scrollView_Graph.autoresizingMask = .FlexibleWidth
@@ -140,32 +141,36 @@ class DAViewController: UIViewController {
     
     func loadCurrentSugarLevel() {
         label_data_SugarLevel.text = "\(self.timeline.getEntryForDate(NSDate()).level)"
+        if self.timeline.getEntryForDate(NSDate()).level > 100 {
+            self.makeItScary()
+        }
     }
     
     func loadDataAndMakeGraph(entries: [DAEntry]) {
         var line = [CGFloat]()
         var xLabelValues = [String]()
-        var shouldCreateLabel = [Bool]()
+//        var shouldCreateLabel = [Bool]()
         for (index, entry) in entries.enumerate() {
-//            if index > 30 && index < 60 {
-                line.append(CGFloat(entry.level))
                 
-                let dateFormatter = NSDateFormatter()
-                dateFormatter.dateFormat = "HH:MM"
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "HH:MM"
             
             if index == 0 || index % 50 == 0 || index == entries.count - 1 {
+                
+                line.append(CGFloat(entry.level))
+                
                 xLabelValues.append(dateFormatter.stringFromDate(entry.entryDate))
                 print(entry.entryDate)
-                shouldCreateLabel.append(true)
-            } else {
-                xLabelValues.append("")
-                shouldCreateLabel.append(false)
+//                shouldCreateLabel.append(true)
+                
             }
-//            } else if index >= 60 {
-//                break
+//            else {
+//                xLabelValues.append("")
+//                shouldCreateLabel.append(false)
 //            }
+            
         }
-        makeGraph(line, xLabelValues: xLabelValues, shouldCreateLabel: shouldCreateLabel)
+        makeGraph(line, xLabelValues: xLabelValues)
     }
     
     func storeFetchResults(data: [[String]]?) {
