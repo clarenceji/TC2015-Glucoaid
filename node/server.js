@@ -5,6 +5,8 @@ var Parse = require('parse/node').Parse;
 var time = require('time');
 var CronJob = require('cron').CronJob;
 var request = require("request");
+var Browser = require("zombie");
+var cheerio = require("cheerio");
 
 Parse.initialize("Z6odwa0AvOCTGRd72nNeDmULJiqiEawl4bxWUfwV", "tbDlnN9RK8lbMaxjmQ3ZHLwrgZjHk6eouZEzqOY7");
 
@@ -40,7 +42,40 @@ router.route('/data')
 
 router.route('/graph')
     .get(function(req, res) {
-        res.send(200);
+
+        var json;
+        var browser = new Browser();
+
+        browser.visit("https://www.managebgl.com/login.html", function() {
+            console.log(browser.location.href);
+
+            browser
+                .fill('email', 'phil.efstat@gmail.com')
+                .fill('password', 'tc2015')
+                .pressButton('Log in');
+            });
+
+
+            browser.wait().then(function() {
+                console.log('Form submitted ok!');
+                // the resulting page will be displayed in your default browser
+                setTimeout(function() {
+                    browser.visit("https://www.managebgl.com/home.html", function() {
+                        var page = browser.resources[0].response.body;
+                        $ = cheerio.load(page);
+
+//                        console.log(page.indexOf("var bgl_estimates ="));
+
+                        var index1 = page.indexOf("var bgl_estimates =");
+                        var index2 = page.indexOf(";", index1);
+                        console.log(index1);
+                        console.log(index2);
+                        res.send(JSON.parse(JSON.stringify(page.substring(index1 + 28, index2))));
+                    });
+
+
+                }, 1000);
+            });
     });
 
 router.route('/estimate')
@@ -48,26 +83,32 @@ router.route('/estimate')
         res.send(200);
     });
 
-router.route('log')
+router.route('/log')
     .post(function (req, res) {
 
-        var url = "https://www.ManageBGL.com/api/1.0/add.json?token=5006--5046b4aceaa70c2b5068427e8e79d07a"
+        var input = JSON.parse(req);
 
-        url.append("&logtype=" + req.body.type);
-        url.append("&value=" + req.body.value);
-        url.append("&time=" + req.body.time);
-        //&log_type=1&value=4.6&time=2015-12-05 16:00:03"
-
-        request(url, function(error, response, body) {
-            console.log(body);
-            if (error) {
-                console.log(error);
-                res.send(400);
-            } else {
-                res.send(200);
-            }
+        request("https://www.ManageBGL.com/api/1.0/login.json?email=phil.efstat@gmail.com&password=tc2015", function(error, response, body) {
+            var data = JSON.parse(body);
+            console.log(data);
+            console.log("token",data.token);
+            var url = "https://www.ManageBGL.com/api/1.0/add.json?token=" + data.token;
+            url += "&logtype=" + input.type;
+            url += "&value=" + input.value;
+            url += "&time=" + input.time;
+            //&log_type=1&value=4.6&time=2015-12-05 16:00:03"
+            request(url, function(error, response, body) {
+                console.log("body",body);
+                if (error) {
+                    console.log(error);
+                    res.send(400);
+                } else {
+                    res.send(200);
+                }
+            });
         });
     });
+
 
 
 app.use('/', router);
