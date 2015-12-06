@@ -67,6 +67,9 @@
                                 <state key="normal" title="Add a new input">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="Q9o-gf-IJv" kind="showDetail" id="WqV-OH-HF5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="150" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oIE-wf-qiz">
                                 <rect key="frame" x="215" y="87" width="171" height="65"/>
@@ -129,6 +132,64 @@
             </objects>
             <point key="canvasLocation" x="1172" y="353"/>
         </scene>
+        <!--Add New Input-->
+        <scene sceneID="vwH-0h-l0Q">
+            <objects>
+                <viewController id="nXo-yL-8VX" customClass="DAAddInputViewController" customModule="Diabetapp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z6d-5S-2Ni"/>
+                        <viewControllerLayoutGuide type="bottom" id="fE3-NQ-k6J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YKv-pw-1yF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWE-Wd-JyB">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.63137254899999995" blue="0.90588235289999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Qhl-qe-XhD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButton_Clicked:" destination="nXo-yL-8VX" eventType="touchUpInside" id="8zB-9e-0NV"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Blood Sugar (mg/dL)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5o6-jr-MFs">
+                                <rect key="frame" x="93" y="172" width="414" height="69"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="83L-Qx-VNt"/>
+                                    <constraint firstAttribute="height" constant="69" id="bLK-ae-BtH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oWE-Wd-JyB" firstAttribute="leading" secondItem="YKv-pw-1yF" secondAttribute="leadingMargin" constant="-20" id="e8c-gO-2z2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="oWE-Wd-JyB" secondAttribute="trailing" constant="-20" id="fw9-OA-Vwp"/>
+                            <constraint firstItem="5o6-jr-MFs" firstAttribute="top" secondItem="z6d-5S-2Ni" secondAttribute="bottom" constant="108" id="huR-LG-Gh7"/>
+                            <constraint firstItem="5o6-jr-MFs" firstAttribute="centerX" secondItem="YKv-pw-1yF" secondAttribute="centerX" id="jVw-qh-5H8"/>
+                            <constraint firstItem="fE3-NQ-k6J" firstAttribute="top" secondItem="oWE-Wd-JyB" secondAttribute="bottom" id="leD-Wa-haN"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add New Input" id="glE-a3-neI"/>
+                    <connections>
+                        <outlet property="addButton" destination="oWE-Wd-JyB" id="t65-qN-b2J"/>
+                        <outlet property="inputField" destination="5o6-jr-MFs" id="1hK-rJ-rlR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kpR-bQ-cbZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2543" y="353"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BP9-Iz-ZYe">
             <objects>
@@ -149,6 +210,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="awW-j7-kmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="494" y="353"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qaX-qp-d4h">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q9o-gf-IJv" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bpr-yl-dSO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="nXo-yL-8VX" kind="relationship" relationship="rootViewController" id="cYq-TH-sLW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybo-Zh-qaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="353"/>
         </scene>
     </scenes>
 </document>
