@@ -555,15 +555,17 @@ public class LineChart: UIView {
     private func drawXLabels() {
         let xAxisData = self.dataStore[0]
         let y = self.bounds.height - x.axis.inset
-        let (_, _, _) = x.linear.ticks(xAxisData.count)
-        let width = x.scale(CGFloat((x.labels.shouldCreateLabel.filter({ (bool) -> Bool in
-            return bool == true
-        }).count)))
+        let (_, _, step) = x.linear.ticks(xAxisData.count)
+        let width = x.scale(step)
+//        CGFloat((x.labels.shouldCreateLabel.filter({ (bool) -> Bool in
+//            return bool == true
+//        }).count))
+        
         
         var text: String
         for (index, _) in xAxisData.enumerate() {
             let xValue = self.x.scale(CGFloat(index)) + x.axis.inset - (width / 2)
-            let label = UILabel(frame: CGRect(x: xValue, y: y, width: width * 15, height: x.axis.inset))
+            let label = UILabel(frame: CGRect(x: xValue, y: y, width: width, height: x.axis.inset))
             label.font = UIFont(name: ".SFUIDisplay-Regular", size: 11)
             
             label.textColor = colors[0]
@@ -575,9 +577,9 @@ public class LineChart: UIView {
                 text = String(index)
             }
             label.text = text
-            if x.labels.shouldCreateLabel[index] {
-                self.addSubview(label)
-            }
+//            if x.labels.shouldCreateLabel[index] {
+            self.addSubview(label)
+//            }
 
         }
     }
