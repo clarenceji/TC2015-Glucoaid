@@ -80,7 +80,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDa-V6-3Yq">
-                                <rect key="frame" x="0.0" y="203" width="600" height="220"/>
+                                <rect key="frame" x="-1" y="238" width="600" height="220"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="220" id="5Tl-Kz-0r4"/>
@@ -93,10 +93,10 @@
                             <constraint firstItem="9WG-6r-A5D" firstAttribute="top" secondItem="6Dk-wb-Qnd" secondAttribute="bottom" constant="4" id="21Z-Qa-sE2"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5uU-h4-sd1" secondAttribute="trailing" constant="-20" id="3Qf-zB-uHF"/>
                             <constraint firstItem="5uU-h4-sd1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="4tr-yh-QMe"/>
-                            <constraint firstItem="kDa-V6-3Yq" firstAttribute="top" secondItem="hP8-cs-nMe" secondAttribute="bottom" constant="8" id="7q8-rQ-Z9U"/>
+                            <constraint firstItem="kDa-V6-3Yq" firstAttribute="top" secondItem="hP8-cs-nMe" secondAttribute="bottom" constant="43" id="7q8-rQ-Z9U"/>
                             <constraint firstItem="pIg-ea-fBB" firstAttribute="top" secondItem="oIE-wf-qiz" secondAttribute="bottom" constant="2" id="AcF-cx-itL"/>
                             <constraint firstItem="oIE-wf-qiz" firstAttribute="top" secondItem="9WG-6r-A5D" secondAttribute="bottom" constant="20" id="B3H-aq-Xxh"/>
-                            <constraint firstItem="kDa-V6-3Yq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="DdY-KQ-rAU"/>
+                            <constraint firstItem="kDa-V6-3Yq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-21" id="DdY-KQ-rAU"/>
                             <constraint firstItem="pIg-ea-fBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JHw-ku-B0p"/>
                             <constraint firstItem="hP8-cs-nMe" firstAttribute="top" secondItem="pIg-ea-fBB" secondAttribute="bottom" constant="19" id="UNa-0h-sL7"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5uU-h4-sd1" secondAttribute="bottom" id="WDC-QT-fou"/>
@@ -104,7 +104,7 @@
                             <constraint firstItem="oIE-wf-qiz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eQJ-9E-yf6"/>
                             <constraint firstItem="6Dk-wb-Qnd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kEv-jw-9a5"/>
                             <constraint firstItem="9WG-6r-A5D" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="m4w-PC-mGm"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="kDa-V6-3Yq" secondAttribute="trailing" constant="-20" id="s0p-Um-W78"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kDa-V6-3Yq" secondAttribute="trailing" constant="-19" id="s0p-Um-W78"/>
                             <constraint firstAttribute="trailingMargin" secondItem="hP8-cs-nMe" secondAttribute="trailing" id="sNf-Cs-UjV"/>
                             <constraint firstItem="6Dk-wb-Qnd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="wVL-d7-X2g"/>
                         </constraints>

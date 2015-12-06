@@ -94,7 +94,7 @@ class DAViewController: UIViewController {
         view.layer.insertSublayer(gradientLayer, atIndex: 0)
     }
     
-    func makeGraph(line: [CGFloat], xLabelValues: [String]) {
+    func makeGraph(line: [CGFloat], xLabelValues: [String], shouldCreateLabel: [Bool]) {
         
         dispatch_async(dispatch_get_main_queue(), {
             
@@ -109,6 +109,7 @@ class DAViewController: UIViewController {
             
             self.lineChart.y.labels.visible = false
             self.lineChart.x.labels.values = xLabelValues
+            self.lineChart.x.labels.shouldCreateLabel = shouldCreateLabel
             
             self.scrollView_Graph.contentSize = self.lineChart.bounds.size
             self.scrollView_Graph.autoresizingMask = .FlexibleWidth
@@ -140,18 +141,27 @@ class DAViewController: UIViewController {
     func loadDataAndMakeGraph(entries: [DAEntry]) {
         var line = [CGFloat]()
         var xLabelValues = [String]()
+        var shouldCreateLabel = [Bool]()
         for (index, entry) in entries.enumerate() {
 //            if index > 30 && index < 60 {
                 line.append(CGFloat(entry.level))
                 
                 let dateFormatter = NSDateFormatter()
                 dateFormatter.dateFormat = "HH:MM"
+            
+            if index == 0 || index % 50 == 0 || index == entries.count - 1 {
                 xLabelValues.append(dateFormatter.stringFromDate(entry.entryDate))
+                print(entry.entryDate)
+                shouldCreateLabel.append(true)
+            } else {
+                xLabelValues.append("")
+                shouldCreateLabel.append(false)
+            }
 //            } else if index >= 60 {
 //                break
 //            }
         }
-        makeGraph(line, xLabelValues: xLabelValues)
+        makeGraph(line, xLabelValues: xLabelValues, shouldCreateLabel: shouldCreateLabel)
     }
     
     func storeFetchResults(data: [[String]]?) {

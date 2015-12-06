@@ -45,6 +45,7 @@ public class LineChart: UIView {
     public struct Labels {
         public var visible: Bool = true
         public var values: [String] = []
+        public var shouldCreateLabel: [Bool] = []
     }
     
     public struct Grid {
@@ -413,11 +414,11 @@ public class LineChart: UIView {
         
         for index in 1..<data.count {
             
-            let dataTimeString = y.labels.values[index]
-            let dataHour = Int(dataTimeString.substringToIndex(dataTimeString.startIndex.advancedBy(2)))
-            if dataHour >= hour {
-                // TODO: 
-            }
+//            let dataTimeString = y.labels.values[index]
+//            let dataHour = Int(dataTimeString.substringToIndex(dataTimeString.startIndex.advancedBy(2)))
+//            if dataHour >= hour {
+//                // TODO: 
+//            }
             
             xValue = self.x.scale(CGFloat(index)) + x.axis.inset
             yValue = self.bounds.height - self.y.scale(data[index]) - y.axis.inset
@@ -554,13 +555,15 @@ public class LineChart: UIView {
     private func drawXLabels() {
         let xAxisData = self.dataStore[0]
         let y = self.bounds.height - x.axis.inset
-        let (_, _, step) = x.linear.ticks(xAxisData.count)
-        let width = x.scale(step)
+        let (_, _, _) = x.linear.ticks(xAxisData.count)
+        let width = x.scale(CGFloat((x.labels.shouldCreateLabel.filter({ (bool) -> Bool in
+            return bool == true
+        }).count)))
         
         var text: String
         for (index, _) in xAxisData.enumerate() {
             let xValue = self.x.scale(CGFloat(index)) + x.axis.inset - (width / 2)
-            let label = UILabel(frame: CGRect(x: xValue, y: y, width: width, height: x.axis.inset))
+            let label = UILabel(frame: CGRect(x: xValue, y: y, width: width * 15, height: x.axis.inset))
             label.font = UIFont(name: ".SFUIDisplay-Regular", size: 11)
             
             label.textColor = colors[0]
@@ -572,7 +575,10 @@ public class LineChart: UIView {
                 text = String(index)
             }
             label.text = text
-            self.addSubview(label)
+            if x.labels.shouldCreateLabel[index] {
+                self.addSubview(label)
+            }
+
         }
     }
     
