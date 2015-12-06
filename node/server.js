@@ -83,6 +83,16 @@ router.route('/graph')
                            .replace(/\\f/g, "\\f");
                         s = s.replace(/[\u0000-\u0019]+/g,"");
                         var obj = JSON.parse(s);
+                        for (var i = 0; i < obj.length; i++) {
+                            if (obj[i] == null) {
+                                obj.splice(i, 1);
+                                i--;
+                            } else {
+                                obj[i][0] = "" + obj[i][0];
+                                obj[i][1] = "" + obj[i][1];
+                            }
+
+                        }
                         res.json({"data": obj});
                     });
 
