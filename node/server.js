@@ -67,10 +67,23 @@ router.route('/graph')
 //                        console.log(page.indexOf("var bgl_estimates ="));
 
                         var index1 = page.indexOf("var bgl_estimates =");
-                        var index2 = page.indexOf(";", index1);
+                        var index2 = page.indexOf("data", index1);
+                        var index3 = page.indexOf(";", index2);
+
                         console.log(index1);
                         console.log(index2);
-                        res.send(JSON.parse(JSON.stringify(page.substring(index1 + 28, index2))));
+                        var s = page.substring(index2 + 6, index3 - 2);
+                        s = s.replace(/\\n/g, "\\n")
+                           .replace(/\\'/g, "\\'")
+                           .replace(/\\"/g, '\\"')
+                           .replace(/\\&/g, "\\&")
+                           .replace(/\\r/g, "\\r")
+                           .replace(/\\t/g, "\\t")
+                           .replace(/\\b/g, "\\b")
+                           .replace(/\\f/g, "\\f");
+                        s = s.replace(/[\u0000-\u0019]+/g,"");
+                        var obj = JSON.parse(s);
+                        res.json({"data": obj});
                     });
 
 
