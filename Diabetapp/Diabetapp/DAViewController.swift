@@ -46,7 +46,7 @@ class DAViewController: UIViewController {
 //        makeItScary()
         
         lineChart = LineChart()
-        
+        print(timeline.timelineData())
         loadData()
     }
     
@@ -114,7 +114,6 @@ class DAViewController: UIViewController {
             
             self.lineChart.y.labels.visible = false
             self.lineChart.x.labels.values = xLabelValues
-            print(xLabelValues)
 //            self.lineChart.x.labels.shouldCreateLabel = shouldCreateLabel
             
             self.lineChart.liveLimit = self.timeline.timeline.indexOf({ (entry) -> Bool in
