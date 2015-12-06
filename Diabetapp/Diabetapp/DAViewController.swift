@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Charts
 
 enum IsItSafeOrNot {
     case Safe
@@ -22,7 +21,9 @@ class DAViewController: UIViewController {
     @IBOutlet var label_unit: UILabel!
     @IBOutlet var button_AddNewInput: UIButton!
     
-    @IBOutlet var view_Graph: UIView!
+    @IBOutlet var scrollView_Graph: UIScrollView!
+    
+    var lineChart: LineChart!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +41,10 @@ class DAViewController: UIViewController {
         
         makeGraph()
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        print(lineChart.y.labels.values)
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -91,10 +96,19 @@ class DAViewController: UIViewController {
     }
     
     func makeGraph() {
-        let lineChartView = LineChartView(frame: view_Graph.bounds)
-        lineChartView.data = LineChartData(xVals: [0, 1, 2, 3, 4, 5])
+        lineChart = LineChart(frame: scrollView_Graph.bounds)
+        lineChart.addLine([3,5,7,1,9,2,12])
         
-        view_Graph.addSubview(lineChartView)
+        lineChart.x.grid.color = UIColor.clearColor()
+        lineChart.y.grid.color = lineChart.y.grid.color.colorWithAlphaComponent(0.3)
+        lineChart.x.axis.color = UIColor(red: 0.121569, green: 0.466667, blue: 0.705882, alpha: 1)
+        
+        lineChart.y.labels.visible = false
+        lineChart.x.labels.values = ["7:00", "8:00", "9:00", "10:00", "11:00", "12:00", "13:00"]
+        
+        scrollView_Graph.contentSize = lineChart.bounds.size
+        scrollView_Graph.autoresizingMask = .FlexibleWidth
+        scrollView_Graph.addSubview(lineChart)
     }
 
 }

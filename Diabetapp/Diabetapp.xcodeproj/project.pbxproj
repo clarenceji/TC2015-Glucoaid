@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		111737471C135E61000D2575 /* DAExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111737461C135E61000D2575 /* DAExtensions.swift */; };
-		111737541C136230000D2575 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1117374F1C1361D2000D2575 /* Charts.framework */; };
-		111737551C136230000D2575 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1117374F1C1361D2000D2575 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1117375D1C138680000D2575 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117375C1C138680000D2575 /* LineChart.swift */; };
 		116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542C1C133DF90032BBF1 /* AppDelegate.swift */; };
 		116D542F1C133DF90032BBF1 /* DAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* DAViewController.swift */; };
 		116D54321C133DF90032BBF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54301C133DF90032BBF1 /* Main.storyboard */; };
@@ -31,34 +30,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1117374E1C1361D2000D2575 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 111737481C1361D2000D2575 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 5BA8EC401A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
-		111737501C1361D2000D2575 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 111737481C1361D2000D2575 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = A52C5C371BAC5CA400594CDD;
-			remoteInfo = "Charts-TV";
-		};
-		111737521C1361D2000D2575 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 111737481C1361D2000D2575 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06AEE7A21BDC3F8B009875AE;
-			remoteInfo = ChartsTests;
-		};
-		111737561C136230000D2575 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 111737481C1361D2000D2575 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 5BA8EC3F1A9D14DC00CE82E1;
-			remoteInfo = "Charts-iOS";
-		};
 		116D54411C133DF90032BBF1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 116D54211C133DF90032BBF1 /* Project object */;
@@ -96,7 +67,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				111737551C136230000D2575 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -127,7 +97,7 @@
 
 /* Begin PBXFileReference section */
 		111737461C135E61000D2575 /* DAExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAExtensions.swift; sourceTree = "<group>"; };
-		111737481C1361D2000D2575 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../Downloads/ios-charts-master/Charts/Charts.xcodeproj"; sourceTree = "<group>"; };
+		1117375C1C138680000D2575 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		116D54291C133DF90032BBF1 /* Diabetapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diabetapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D542C1C133DF90032BBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		116D542E1C133DF90032BBF1 /* DAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAViewController.swift; sourceTree = "<group>"; };
@@ -142,6 +112,8 @@
 		116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabetappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetappUITests.swift; sourceTree = "<group>"; };
 		116D54511C133DF90032BBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11DF2BDE1C139848001B8937 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		11DF2BDF1C139A98001B8937 /* Graph.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Graph.playground; sourceTree = "<group>"; };
 		2B4B69541C13527C0046F324 /* Diabetapp for AppleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diabetapp for AppleWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4B69571C13527C0046F324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2B4B69591C13527C0046F324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,7 +134,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				111737541C136230000D2575 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,16 +161,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		111737491C1361D2000D2575 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1117374F1C1361D2000D2575 /* Charts.framework */,
-				111737511C1361D2000D2575 /* Charts.framework */,
-				111737531C1361D2000D2575 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		116D54201C133DF90032BBF1 = {
 			isa = PBXGroup;
 			children = (
@@ -227,7 +188,6 @@
 		116D542B1C133DF90032BBF1 /* Diabetapp */ = {
 			isa = PBXGroup;
 			children = (
-				111737481C1361D2000D2575 /* Charts.xcodeproj */,
 				116D54601C1345FC0032BBF1 /* Model */,
 				116D54621C13460B0032BBF1 /* Controller */,
 				116D54611C1346070032BBF1 /* View */,
@@ -259,7 +219,10 @@
 		116D54601C1345FC0032BBF1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1117375C1C138680000D2575 /* LineChart.swift */,
 				111737461C135E61000D2575 /* DAExtensions.swift */,
+				11DF2BDF1C139A98001B8937 /* Graph.playground */,
+				11DF2BDE1C139848001B8937 /* MyPlayground.playground */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -332,7 +295,6 @@
 			);
 			dependencies = (
 				2B4B69751C13527C0046F324 /* PBXTargetDependency */,
-				111737571C136230000D2575 /* PBXTargetDependency */,
 			);
 			name = Diabetapp;
 			productName = Diabetapp;
@@ -435,6 +397,7 @@
 					};
 					2B4B695F1C13527C0046F324 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = G6TTA6H999;
 					};
 				};
 			};
@@ -449,12 +412,6 @@
 			mainGroup = 116D54201C133DF90032BBF1;
 			productRefGroup = 116D542A1C133DF90032BBF1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 111737491C1361D2000D2575 /* Products */;
-					ProjectRef = 111737481C1361D2000D2575 /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				116D54281C133DF90032BBF1 /* Diabetapp */,
@@ -465,30 +422,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		1117374F1C1361D2000D2575 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 1117374E1C1361D2000D2575 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		111737511C1361D2000D2575 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 111737501C1361D2000D2575 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		111737531C1361D2000D2575 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 111737521C1361D2000D2575 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		116D54271C133DF90032BBF1 /* Resources */ = {
@@ -543,6 +476,7 @@
 				116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */,
 				111737471C135E61000D2575 /* DAExtensions.swift in Sources */,
 				116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */,
+				1117375D1C138680000D2575 /* LineChart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -577,11 +511,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		111737571C136230000D2575 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Charts-iOS";
-			targetProxy = 111737561C136230000D2575 /* PBXContainerItemProxy */;
-		};
 		116D54421C133DF90032BBF1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 116D54281C133DF90032BBF1 /* Diabetapp */;
@@ -719,6 +648,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Diabetapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -731,6 +661,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = Diabetapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -821,10 +752,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Diabetapp for AppleWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -836,10 +770,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Diabetapp for AppleWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
