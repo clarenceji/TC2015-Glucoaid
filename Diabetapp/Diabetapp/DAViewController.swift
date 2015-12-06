@@ -27,9 +27,13 @@ class DAViewController: UIViewController {
     var timeline = DATimeline()
     var timer: NSTimer!
     
+    var gradientLayer: CAGradientLayer!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        gradientLayer = CAGradientLayer()
         
         label_currentEst.textColor = UIColor.whiteColor()
         label_data_currentEst.textColor = UIColor.whiteColor()
@@ -72,13 +76,14 @@ class DAViewController: UIViewController {
     func makeGradientBg(isSafe: IsItSafeOrNot) {
         
         var initialColor: UIColor!
+        print(isSafe)
         if isSafe == .Safe {
             
-            initialColor = UIColor.diabetBlue()
+            initialColor = .diabetBlue()
             
         } else {
             
-            initialColor = UIColor.diabetRed()
+            initialColor = .diabetRed()
             
         }
         
@@ -86,11 +91,11 @@ class DAViewController: UIViewController {
         let gradientColors = [initialColor.CGColor, gradientColor.CGColor]
         let gradientLocations: [CGFloat] = [0.2, 0.8]
         
-        let gradientLayer = CAGradientLayer()
         gradientLayer.colors = gradientColors
         gradientLayer.locations = gradientLocations
         gradientLayer.frame = view.bounds
         
+        gradientLayer.removeFromSuperlayer()
         view.layer.insertSublayer(gradientLayer, atIndex: 0)
     }
     
@@ -142,7 +147,9 @@ class DAViewController: UIViewController {
     func loadCurrentSugarLevel() {
         label_data_SugarLevel.text = "\(self.timeline.getEntryForDate(NSDate()).level)"
         if self.timeline.getEntryForDate(NSDate()).level > 100 {
-            self.makeItScary()
+            dispatch_async(dispatch_get_main_queue(), {
+                self.makeItScary()
+            })
         }
     }
     
