@@ -1,6 +1,7 @@
 import UIKit
 import XCPlayground
 
+<<<<<<< HEAD
 //let path = UIBezierPath()
 //path.moveToPoint(CGPointMake(10, 10))
 //path.addLineToPoint(CGPointMake(290, 10))
@@ -62,3 +63,27 @@ func controlPointForPoints(p1: CGPoint, _ p2: CGPoint) -> CGPoint {
 
 let points: [CGPoint] = [CGPointMake(10, 10), CGPointMake(20, 20), CGPointMake(30, 30), CGPointMake(40, 40), CGPointMake(50, 50)]
 quadCurvedPathWithPoints(points)
+=======
+let path = UIBezierPath()
+path.moveToPoint(CGPointMake(10, 10))
+path.addLineToPoint(CGPointMake(290, 10))
+path.lineWidth = 6
+
+let dashes: [CGFloat] = [path.lineWidth * 3, path.lineWidth * 3]
+path.setLineDash(dashes, count: dashes.count, phase: 0)
+path.lineCapStyle = .Round
+
+UIGraphicsBeginImageContextWithOptions(CGSizeMake(300, 20), false, 2)
+path.stroke()
+
+let view = UIView(frame: CGRectMake(0,0,500,500))
+view.backgroundColor = UIColor.whiteColor()
+
+let image = UIGraphicsGetImageFromCurrentImageContext()
+
+UIGraphicsEndImageContext()
+
+// ------------------ curve line ------------------------
+
+
+>>>>>>> 673fc6f1e4e4b00c4dbbdba146b548fe0fddb6ab

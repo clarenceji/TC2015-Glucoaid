@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111737471C135E61000D2575 /* DAExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111737461C135E61000D2575 /* DAExtensions.swift */; };
+		1117375D1C138680000D2575 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1117375C1C138680000D2575 /* LineChart.swift */; };
 		116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542C1C133DF90032BBF1 /* AppDelegate.swift */; };
-		116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* ViewController.swift */; };
+		116D542F1C133DF90032BBF1 /* DAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D542E1C133DF90032BBF1 /* DAViewController.swift */; };
 		116D54321C133DF90032BBF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54301C133DF90032BBF1 /* Main.storyboard */; };
 		116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 116D54331C133DF90032BBF1 /* Diabetapp.xcdatamodeld */; };
 		116D54371C133DF90032BBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116D54361C133DF90032BBF1 /* Assets.xcassets */; };
 		116D543A1C133DF90032BBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */; };
 		116D54451C133DF90032BBF1 /* DiabetappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D54441C133DF90032BBF1 /* DiabetappTests.swift */; };
 		116D54501C133DF90032BBF1 /* DiabetappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */; };
+		11DF2BE11C13BA19001B8937 /* DAServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF2BE01C13BA19001B8937 /* DAServer.swift */; };
 		2B4B69581C13527C0046F324 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B69561C13527C0046F324 /* Interface.storyboard */; };
 		2B4B695A1C13527C0046F324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B69591C13527C0046F324 /* Assets.xcassets */; };
 		2B4B69611C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B4B69601C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -63,6 +66,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		111737581C136230000D2575 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		2B4B697C1C13527C0046F324 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -98,9 +111,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		111737461C135E61000D2575 /* DAExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAExtensions.swift; sourceTree = "<group>"; };
+		1117375C1C138680000D2575 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		116D54291C133DF90032BBF1 /* Diabetapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diabetapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D542C1C133DF90032BBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		116D542E1C133DF90032BBF1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		116D542E1C133DF90032BBF1 /* DAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DAViewController.swift; sourceTree = "<group>"; };
 		116D54311C133DF90032BBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		116D54341C133DF90032BBF1 /* Diabetapp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Diabetapp.xcdatamodel; sourceTree = "<group>"; };
 		116D54361C133DF90032BBF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -112,6 +127,9 @@
 		116D544B1C133DF90032BBF1 /* DiabetappUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiabetappUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetappUITests.swift; sourceTree = "<group>"; };
 		116D54511C133DF90032BBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11DF2BDE1C139848001B8937 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		11DF2BDF1C139A98001B8937 /* Graph.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Graph.playground; sourceTree = "<group>"; };
+		11DF2BE01C13BA19001B8937 /* DAServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAServer.swift; sourceTree = "<group>"; };
 		2B4B69541C13527C0046F324 /* Diabetapp for AppleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diabetapp for AppleWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4B69571C13527C0046F324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2B4B69591C13527C0046F324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,6 +239,11 @@
 			children = (
 				2B6FB76B1C13BB3D00DF1473 /* DAEntry.swift */,
 				2B6FB76C1C13BB3D00DF1473 /* DATimeline.swift */,
+				1117375C1C138680000D2575 /* LineChart.swift */,
+				11DF2BE01C13BA19001B8937 /* DAServer.swift */,
+				111737461C135E61000D2575 /* DAExtensions.swift */,
+				11DF2BDF1C139A98001B8937 /* Graph.playground */,
+				11DF2BDE1C139848001B8937 /* MyPlayground.playground */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -238,7 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				116D542C1C133DF90032BBF1 /* AppDelegate.swift */,
-				116D542E1C133DF90032BBF1 /* ViewController.swift */,
+				116D542E1C133DF90032BBF1 /* DAViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -287,7 +310,7 @@
 				116D54261C133DF90032BBF1 /* Frameworks */,
 				116D54271C133DF90032BBF1 /* Resources */,
 				2B4B697E1C13527C0046F324 /* Embed Watch Content */,
-				2B6FB74D1C13788C00DF1473 /* Embed Frameworks */,
+				111737581C136230000D2575 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -395,6 +418,7 @@
 					};
 					2B4B695F1C13527C0046F324 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = G6TTA6H999;
 					};
 				};
 			};
@@ -469,11 +493,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116D542F1C133DF90032BBF1 /* ViewController.swift in Sources */,
+				116D542F1C133DF90032BBF1 /* DAViewController.swift in Sources */,
 				116D542D1C133DF90032BBF1 /* AppDelegate.swift in Sources */,
+				111737471C135E61000D2575 /* DAExtensions.swift in Sources */,
 				116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */,
 				2B6FB76E1C13BB3D00DF1473 /* DATimeline.swift in Sources */,
 				2B6FB76D1C13BB3D00DF1473 /* DAEntry.swift in Sources */,
+				1117375D1C138680000D2575 /* LineChart.swift in Sources */,
+				11DF2BE11C13BA19001B8937 /* DAServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -648,6 +675,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = Diabetapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -661,6 +689,7 @@
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = Diabetapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -763,10 +792,13 @@
 					"$(PROJECT_DIR)",
 					"$(inherited)",
 				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Diabetapp for AppleWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -782,10 +814,13 @@
 					"$(PROJECT_DIR)",
 					"$(inherited)",
 				);
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Diabetapp for AppleWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tc2015.Diabetapp.watchkitapp.watchkitextension;
 				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = 4;
