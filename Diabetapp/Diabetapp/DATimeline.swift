@@ -40,19 +40,19 @@ class DATimeline: NSObject {
         return timeline[0]
     }
     
-    func dummyTimeline() -> [DAEntry] {
+    func timelineData() -> [DAEntry] {
     
         let entries = [DAEntry(level: 10 * 5, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: -20 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 4, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: -60 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 3, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: -100 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 2, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: -140 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 1, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: -180 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 6, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: 0 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 6, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: 20 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 7, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: 60 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 8, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: 100 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 9, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: 140 * DATimeline.MINUTE)),
-            DAEntry(level: 10 * 10, estimate: 100, entryDate: NSDate(timeIntervalSinceNow: 180 * DATimeline.MINUTE))]
+            DAEntry(level: 90, estimate: 90, entryDate: NSDate(timeIntervalSinceNow: -60 * DATimeline.MINUTE)),
+            DAEntry(level: 85, estimate: 85, entryDate: NSDate(timeIntervalSinceNow: -100 * DATimeline.MINUTE)),
+            DAEntry(level: 85, estimate: 90, entryDate: NSDate(timeIntervalSinceNow: -140 * DATimeline.MINUTE)),
+            DAEntry(level: 82, estimate: 90, entryDate: NSDate(timeIntervalSinceNow: -180 * DATimeline.MINUTE)),
+            DAEntry(level: 82, estimate: 92, entryDate: NSDate(timeIntervalSinceNow: 0 * DATimeline.MINUTE)),
+            DAEntry(level: 88, estimate: 80, entryDate: NSDate(timeIntervalSinceNow: 20 * DATimeline.MINUTE)),
+            DAEntry(level: 90, estimate: 70, entryDate: NSDate(timeIntervalSinceNow: 60 * DATimeline.MINUTE)),
+            DAEntry(level: 85, estimate: 78, entryDate: NSDate(timeIntervalSinceNow: 100 * DATimeline.MINUTE)),
+            DAEntry(level: 85, estimate: 80, entryDate: NSDate(timeIntervalSinceNow: 140 * DATimeline.MINUTE)),
+            DAEntry(level: 82, estimate: 90, entryDate: NSDate(timeIntervalSinceNow: 180 * DATimeline.MINUTE))]
         return entries
     }
 }
