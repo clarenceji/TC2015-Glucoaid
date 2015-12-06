@@ -25,7 +25,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         case .ModularLarge:
             let modularLargeTemplate = CLKComplicationTemplateModularLargeStandardBody()
             modularLargeTemplate.headerTextProvider = CLKTimeIntervalTextProvider(startDate: entry.entryDate,
-                endDate: NSDate(timeIntervalSinceNow: 60))
+                endDate: NSDate(timeInterval: 60, sinceDate: entry.entryDate))
             modularLargeTemplate.body1TextProvider =
                 CLKSimpleTextProvider(text: "\(entry.level) mg/dL", shortText: "\(entry.level) mg/dL")
             modularLargeTemplate.body2TextProvider =
@@ -63,7 +63,6 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
         
         for entry in timeline {
             if (entry.entryDate.timeIntervalSinceNow >= 0) {
-                print("CURRENT: \(entry)")
                 handler(getEntryFor(complication, entry: entry, date: entry.entryDate))
                 return
             }
