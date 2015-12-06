@@ -12,6 +12,11 @@ import Foundation
 
 class InterfaceController: WKInterfaceController {
 
+    @IBOutlet var level: WKInterfaceLabel!
+    
+    var timeline = DATimeline()
+    var timer: NSTimer!
+    
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
         
@@ -21,6 +26,26 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        DAServer.sharedSession().fetchData("http://tc2015.herokuapp.com/graph") { (data, error) -> Void in
+            if data != nil {
+                self.timeline.convertDataToDAEntries(data)
+                
+                self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "loadCurrentSugarLevel", userInfo: nil, repeats: true)
+                self.timer.fire()
+                self.loadCurrentSugarLevel()
+            }
+        }
+    }
+    
+    func loadCurrentSugarLevel() {
+        let entry = timeline.getEntryForDate(NSDate())
+        if entry.level <= 100 {
+            level.setTextColor(UIColor.blueColor())
+        } else {
+            level.setTextColor(UIColor.redColor())
+        }
+        level.setText("\(entry.level)")
     }
 
     override func didDeactivate() {

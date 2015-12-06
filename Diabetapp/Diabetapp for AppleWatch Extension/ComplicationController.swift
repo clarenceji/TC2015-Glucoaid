@@ -10,7 +10,7 @@ import ClockKit
 
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
-    let timeline = DATimeline().dummyTimeline()
+    let timeline = DATimeline().timeline
     
     // MARK: - Timeline Configuration
     func getEntryFor(complication: CLKComplication, entry: DAEntry, date: NSDate) -> CLKComplicationTimelineEntry? {
@@ -98,7 +98,7 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getNextRequestedUpdateDateWithHandler(handler: (NSDate?) -> Void) {
         // Call the handler with the date when you would next like to be given the opportunity to update your complication content
-        handler(nil);
+        handler(NSDate(timeIntervalSinceNow: 5 * DATimeline.MINUTE));
     }
     
     // MARK: - Placeholder Templates

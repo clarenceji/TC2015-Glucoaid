@@ -12,12 +12,32 @@ class DATimeline: NSObject {
     static let HOUR: NSTimeInterval = 60 * 60
     static let MINUTE: NSTimeInterval = 60
     
-    //var timeline = DATimeline.dummyTimeline()
+    var timeline = [DAEntry]()
     
-    func addEntryToTimeline(level: Int, estimate: Int) {
+    func convertDataToDAEntries(data: [[String]]?) {
         
-        let entry = DAEntry(level: level, estimate: estimate, entryDate: NSDate())
-        //timeline.append(entry)
+        for entry: [String] in data! {
+            var entryTime = entry[0]
+            entryTime = entryTime.substringWithRange(Range<String.Index>(start: entryTime.startIndex, end: entryTime.endIndex.advancedBy(-3)))
+            
+            let entryDate = NSDate(timeIntervalSince1970: Double(entryTime)!)
+            
+            let daEntry = DAEntry(level: Int(entry[1])!, estimate: 60, entryDate: entryDate)
+            
+            timeline.append(daEntry)
+        }
+    }
+    
+    func getEntryForDate(date: NSDate) -> DAEntry {
+        if timeline.count > 0 {
+            let filtered = timeline.filter({ (entry) -> Bool in
+                return entry.entryDate.timeIntervalSinceDate(date) > 0
+            })
+            
+            return filtered[0]
+        }
+        
+        return timeline[0]
     }
     
     func dummyTimeline() -> [DAEntry] {

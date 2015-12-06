@@ -36,6 +36,9 @@
                             </items>
                         </group>
                     </items>
+                    <connections>
+                        <outlet property="level" destination="BfM-jg-u2J" id="gf3-Tj-iEl"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="235" y="376"/>

@@ -24,6 +24,8 @@ class DAViewController: UIViewController {
     @IBOutlet var scrollView_Graph: UIScrollView!
     
     var lineChart: LineChart!
+    var timeline = DATimeline()
+    var timer: NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +44,6 @@ class DAViewController: UIViewController {
         lineChart = LineChart()
         
         loadData()
-        
-        
     }
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
@@ -121,21 +121,25 @@ class DAViewController: UIViewController {
     
     func loadData() {
         
-        var entries = [DAEntry]()
-        
         if let data = NSUserDefaults.standardUserDefaults().objectForKey("downloadedData") {
-            entries = self.convertDataToDAEntries(data as? [[String]])
-            loadDataAndMakeGraph(entries)
+            timeline.convertDataToDAEntries(data as? [[String]])
+            loadDataAndMakeGraph(timeline.timeline)
         } else {
             DAServer.sharedSession().fetchData("http://tc2015.herokuapp.com/graph") { (data, error) -> Void in
                 if data != nil {
-                    entries = self.convertDataToDAEntries(data)
-                    self.loadDataAndMakeGraph(entries)
+                    self.timeline.convertDataToDAEntries(data)
+                    self.loadDataAndMakeGraph(self.timeline.timeline)
+                    
+                    self.timer = NSTimer.scheduledTimerWithTimeInterval(60, target: self, selector: "loadCurrentSugarLevel", userInfo: nil, repeats: true)
+                    self.timer.fire()
+                    self.loadCurrentSugarLevel()
                 }
             }
         }
-        
-
+    }
+    
+    func loadCurrentSugarLevel() {
+        label_data_SugarLevel.text = "\(self.timeline.getEntryForDate(NSDate()).level)"
     }
     
     func loadDataAndMakeGraph(entries: [DAEntry]) {
@@ -168,23 +172,4 @@ class DAViewController: UIViewController {
         let userDefaults = NSUserDefaults.standardUserDefaults()
         userDefaults.setObject(data, forKey: "downloadedData")
     }
-    
-    func convertDataToDAEntries(data: [[String]]?) -> [DAEntry] {
-        
-        var entries = [DAEntry]()
-        for entry: [String] in data! {
-            var entryTime = entry[0]
-            entryTime = entryTime.substringWithRange(Range<String.Index>(start: entryTime.startIndex, end: entryTime.endIndex.advancedBy(-3)))
-            
-            let entryDate = NSDate(timeIntervalSince1970: Double(entryTime)!)
-            
-            let daEntry = DAEntry(level: Int(entry[1])!, estimate: 60, entryDate: entryDate)
-            
-            entries.append(daEntry)
-        }
-        
-        print(entries)
-        return entries
-    }
-
 }

@@ -32,6 +32,7 @@
 		2B6FB76E1C13BB3D00DF1473 /* DATimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FB76C1C13BB3D00DF1473 /* DATimeline.swift */; };
 		2B6FB7711C13DC4A00DF1473 /* DATimeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FB76C1C13BB3D00DF1473 /* DATimeline.swift */; };
 		2B6FB7721C13DC4C00DF1473 /* DAEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6FB76B1C13BB3D00DF1473 /* DAEntry.swift */; };
+		2BCCA6F71C1409B00046BB02 /* DAServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF2BE01C13BA19001B8937 /* DAServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -519,6 +520,7 @@
 				2B4B69701C13527C0046F324 /* ComplicationController.swift in Sources */,
 				2B6FB7711C13DC4A00DF1473 /* DATimeline.swift in Sources */,
 				2B6FB7721C13DC4C00DF1473 /* DAEntry.swift in Sources */,
+				2BCCA6F71C1409B00046BB02 /* DAServer.swift in Sources */,
 				2B4B69681C13527C0046F324 /* InterfaceController.swift in Sources */,
 				2B4B696E1C13527C0046F324 /* GlanceController.swift in Sources */,
 			);

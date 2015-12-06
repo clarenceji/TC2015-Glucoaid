@@ -9,7 +9,6 @@
 import WatchKit
 import Foundation
 
-
 class GlanceController: WKInterfaceController {
 
     override func awakeWithContext(context: AnyObject?) {
