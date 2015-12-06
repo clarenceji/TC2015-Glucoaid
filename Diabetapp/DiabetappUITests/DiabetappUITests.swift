@@ -31,6 +31,20 @@ class DiabetappUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        
+        let app = XCUIApplication()
+        let scrollViewsQuery = app.scrollViews
+        let element = scrollViewsQuery.otherElements.containingType(.StaticText, identifier:"7:00").element
+        element.tap()
+        element.tap()
+        element.tap()
+        app.staticTexts["150"].tap()
+        app.navigationBars["Diabetapp"].buttons["Data"].tap()
+        app.buttons["Add a new input"].tap()
+        scrollViewsQuery.otherElements.staticTexts["10:00"].tap()
+        element.tap()
+        
     }
     
 }

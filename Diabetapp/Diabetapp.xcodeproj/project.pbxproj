@@ -17,6 +17,7 @@
 		116D543A1C133DF90032BBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116D54381C133DF90032BBF1 /* LaunchScreen.storyboard */; };
 		116D54451C133DF90032BBF1 /* DiabetappTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D54441C133DF90032BBF1 /* DiabetappTests.swift */; };
 		116D54501C133DF90032BBF1 /* DiabetappUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116D544F1C133DF90032BBF1 /* DiabetappUITests.swift */; };
+		11DF2BE11C13BA19001B8937 /* DAServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11DF2BE01C13BA19001B8937 /* DAServer.swift */; };
 		2B4B69581C13527C0046F324 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B69561C13527C0046F324 /* Interface.storyboard */; };
 		2B4B695A1C13527C0046F324 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B4B69591C13527C0046F324 /* Assets.xcassets */; };
 		2B4B69611C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2B4B69601C13527C0046F324 /* Diabetapp for AppleWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -114,6 +115,7 @@
 		116D54511C133DF90032BBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11DF2BDE1C139848001B8937 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		11DF2BDF1C139A98001B8937 /* Graph.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Graph.playground; sourceTree = "<group>"; };
+		11DF2BE01C13BA19001B8937 /* DAServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DAServer.swift; sourceTree = "<group>"; };
 		2B4B69541C13527C0046F324 /* Diabetapp for AppleWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Diabetapp for AppleWatch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B4B69571C13527C0046F324 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		2B4B69591C13527C0046F324 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				1117375C1C138680000D2575 /* LineChart.swift */,
+				11DF2BE01C13BA19001B8937 /* DAServer.swift */,
 				111737461C135E61000D2575 /* DAExtensions.swift */,
 				11DF2BDF1C139A98001B8937 /* Graph.playground */,
 				11DF2BDE1C139848001B8937 /* MyPlayground.playground */,
@@ -477,6 +480,7 @@
 				111737471C135E61000D2575 /* DAExtensions.swift in Sources */,
 				116D54351C133DF90032BBF1 /* Diabetapp.xcdatamodeld in Sources */,
 				1117375D1C138680000D2575 /* LineChart.swift in Sources */,
+				11DF2BE11C13BA19001B8937 /* DAServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
