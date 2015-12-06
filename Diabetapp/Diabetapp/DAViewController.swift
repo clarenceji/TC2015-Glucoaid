@@ -41,6 +41,10 @@ class DAViewController: UIViewController {
         
         makeGraph()
         
+        DAServer.sharedSession().fetchData("http://tc2015.herokuapp.com/graph") { (data, error) -> Void in
+            print(data, error)
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {

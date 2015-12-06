@@ -29,19 +29,7 @@ class DAServer: NSObject {
         
     }
     
-    func fetchData(urlString: String, completion: (arrayOfData: [[String]]?, error: DAServerError) -> Void) {
-        sendAsynchronousRequest(urlString) { (data, error) -> Void in
-            if data != nil {
-                let dictionary = data as! NSDictionary
-                let arrayOfData = dictionary.objectForKey("data") as! [[String]]
-                completion(arrayOfData: arrayOfData, error: error)
-            } else {
-                completion(arrayOfData: nil, error: .ParseError)
-            }
-        }
-    }
-    
-    func sendAsynchronousRequest(urlString: String, completion: (data: AnyObject?, error: DAServerError) -> Void) {
+    func fetchData(urlString: String, completion: (data: AnyObject?, error: DAServerError) -> Void) {
         
         let session = NSURLSession.sharedSession()
         session.dataTaskWithURL(NSURL(string: urlString)!) { (data, response, error) -> Void in
