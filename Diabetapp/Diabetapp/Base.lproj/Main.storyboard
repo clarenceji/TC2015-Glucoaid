@@ -5,7 +5,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Diabetapp-->
+        <!--Glucoaid-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="DAViewController" customModule="Diabetapp" customModuleProvider="target" sceneMemberID="viewController">
@@ -112,7 +112,7 @@
                             <constraint firstItem="6Dk-wb-Qnd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="wVL-d7-X2g"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Diabetapp" id="UQr-cw-Gwi">
+                    <navigationItem key="navigationItem" title="Glucoaid" id="UQr-cw-Gwi">
                         <barButtonItem key="rightBarButtonItem" tag="1" title="Data" id="wdZ-mM-wHH">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
