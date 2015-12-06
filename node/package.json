@@ -1,7 +1,7 @@
 {
   "name": "tc2015",
   "version": "0.0.1",
-  "description": "Flubit 2015",
+  "description": "",
   "dependencies": {
     "body-parser": "^1.14.1",
     "cheerio": "^0.19.0",
